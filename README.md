@@ -1,25 +1,22 @@
 # 🏗️ Terraform-google-Subnet
 
-[![OpsStation](https://img.shields.io/badge/Made%20by-OpsStation-blue?style=flat-square&logo=terraform)](https://www.opsstation.com)
+[![vikas](https://img.shields.io/badge/Made%20by-vikas-blue?style=flat-square&logo=terraform)]
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Terraform](https://img.shields.io/badge/Terraform-1.13%2B-purple.svg?logo=terraform)](#)
-[![CI](https://github.com/OpsStation/terraform-multicloud-labels/actions/workflows/ci.yml/badge.svg)](https://github.com/OpsStation/terraform-multicloud-labels/actions/workflows/ci.yml)
-[![Latest Release](https://img.shields.io/github/release/opsstation/terraform-gcp-vpc.svg)](https://github.com/opsstation/terraform-gcp-vpc/releases/latest)
+[![CI](https://github.com/chahalvikas2022/terraform-multicloud-labels/actions/workflows/ci.yml/badge.svg)](https://github.com/chahalvikas2022/terraform-multicloud-labels/actions/workflows/ci.yml)
+[![Latest Release](https://img.shields.io/github/release/chahalvikas2022/terraform-gcp-vpc.svg)](https://github.com/chahalvikas2022/terraform-gcp-vpc/releases/latest)
 
-> 🌩️ **A production-grade, reusable GCP Subnet module by [OpsStation](https://www.opsstation.com)**
+> 🌩️ **A production-grade, reusable GCP Subnet module by [vikas]**
 > Designed for reliability, performance, and security — following GCP networking best practices.
 ---
 
-## 🏢 About OpsStation
+## 🏢 About Vikas
 
-**OpsStation** delivers **Cloud & DevOps excellence** for modern teams:
+**Vikas** delivers **Cloud & DevOps excellence** for modern teams:
 - 🚀 **Infrastructure Automation** with Terraform, Ansible & Kubernetes
 - 💰 **Cost Optimization** via scaling & right-sizing
 - 🛡️ **Security & Compliance** baked into CI/CD pipelines
 - ⚙️ **Fully Managed Operations** across GCP, Azure, and AWS
-
-> 💡 Need enterprise-grade DevOps automation?
-> 👉 Visit [**www.opsstation.com**](https://www.opsstation.com) or email **hello@opsstation.com**
 
 ---
 🌟 Features
@@ -32,7 +29,7 @@
 
 ✅ Optional Shared Subnet support (host/service project configuration)
 
-✅ Supports **custom labels** using [OpsStation multicloud module](https://registry.terraform.io/modules/opsstation/labels/multicloud/latest)
+✅ Supports **custom labels** using [vikas multicloud module](https://registry.terraform.io/modules/chahalvikas2022/labels/multicloud/latest)
 
 ✅ Supports private/public subnet logic, NAT setup, and external IP allocation
 
@@ -50,8 +47,7 @@
 
 ```hcl
 module "subnet" {
-  source        = "opsstation/subnet/gcp"
-  version       = "1.0.1"
+  source        = "https://github.com/chahalvikas2022/terraform-gcp-subnet.git"
   name          = ["dev"]
   environment   = "test"
   region        = "asia-northeast1"
@@ -72,8 +68,7 @@ module "subnet" {
 
 ```hcl
 module "subnet" {
-  source           = "opsstation/subnet/gcp"
-  version          = "1.0.1"
+  source           = "https://github.com/chahalvikas2022/terraform-gcp-subnet.git"
   name = [
     "subnet-public-1",
     "subnet-public-2",
